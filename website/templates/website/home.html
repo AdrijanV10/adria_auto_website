@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adria Auto Center | Ottawa's Auto Repair Specialists</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'website/style.css' %}">
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="logo-link">
+            <img src="{% static 'website/AdriaLogo.png' %}" alt="Adria Auto Center Logo" class="nav-logo">
+        </a>
+    
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#services">Services</a>
+            <a href="{% url 'about' %}">About</a>
+            <a href="{% url 'contact' %}" class="btn-primary nav-btn">Book Now</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <h1>Ottawa's Auto Repair Shop</h1>
+        <p>Serving the Ottawa area with expert German and Volvo car repair for 40+ years.</p>
+        <br>
+        <a href="{% url 'contact' %}" class="btn-primary">Schedule Appointment</a>
+    </header>
+
+    <div class="container" id="services">
+        <h2 class="section-title">Our Specialized Services</h2>
+        <div class="services-grid">
+            <div class="card">
+                <h3>German Car Specialist</h3>
+                <p>Expert diagnostics and repair for Volkswagen, Audi, and BMW using factory grade tools.</p>
+            </div>
+            <div class="card">
+                <h3>Volvo Service</h3>
+                <p>Dedicated Volvo maintenance and repairs to keep your Swedish engineering running perfectly.</p>
+            </div>
+            <div class="card">
+                <h3>General Maintenance</h3>
+                <p>From oil changes to brake replacements, we handle all your vehicle's essential needs.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Adria Auto Center</p>
+        <p>1406 Bank St, Ottawa, Ontario | <a href="tel:6137383332" style="color: inherit; text-decoration: none;">(613) 738-3332</a></p>
+        <p>Hours: Mon-Fri 8am-5pm</p>
+    </footer>
+
+</body>
+</html>
